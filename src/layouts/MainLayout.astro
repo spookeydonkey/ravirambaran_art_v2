@@ -1,0 +1,29 @@
+---
+import MainHead from "./MainHead.astro";
+import Footer from "../components/organisms/Footer.astro";
+
+//styles import
+import "../../css/main.css";
+import "../../css/colors.css";
+import "../../css/typography.css";
+import "../../css/sizing.css";
+
+const {
+  title = "My personal art page",
+  description = "Ravi Rambaran's beautiful artwork",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <MainHead {title} {description} />
+  <body>
+    <slot />
+    <Footer slot="" />
+
+    <style is:global>
+      :root {
+      }
+    </style>
+  </body>
+</html>

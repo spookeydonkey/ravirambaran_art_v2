@@ -1,0 +1,209 @@
+:root {
+  --s0: 1rem;
+
+}
+
+/* css reset  */
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+  
+}
+
+html {
+  font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+  -webkit-text-size-adjust: none;
+  /* for iOS Safari */
+  text-size-adjust: none;
+  /* for other mobile browsers */
+  font-family: system-ui, sans-serif;
+  background-color: hsl(0, 0%, 96.5%);
+}
+
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+  --text-color: rgb(32, 49, 32);
+  --heading-color: rgb(32, 49, 32);
+  --bg-color: hsl(0, 0%, 96.5%);
+  --accent-color: rgb(124, 58, 237);
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+
+menu,
+ol,
+ul {
+  padding-left: 0;
+}
+a {
+  /* Places underlines below the descenders */
+  text-underline-position: under;  
+  /* Sets the thickness as a percentage of the font size */
+  text-decoration-thickness: 8;
+  text-decoration: none;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a:hover {
+  color: rgb(32, 49, 32);
+  border-bottom: 1px rgb(32, 49, 32) dotted;
+}
+
+a:visited {
+  color: black;
+}
+
+a.home:active {
+  color: rgb(100, 153, 100);
+  border-bottom: 1px rgb(100, 153, 100);
+}
+
+code {
+  font-family: Varela Round, Menlo, Monaco, Lucida Console,
+    Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+    Courier New, monospace;
+}
+
+
+
+/*--- main/gallery/hoofdelement wrapper  ---*/
+
+.site-wrapped {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Varela Round", sans-serif;
+  /* font: normal; variabele?*/
+  color: rgb(32, 49, 32);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas:
+    "mobmenu"
+    "header"
+    "main"
+    "footer";
+  justify-content: center;
+  align-content: center;
+}
+
+
+/* menu mobile */
+
+
+/* navigatiebalkje */
+
+
+/* main content/about/blog */
+
+
+/* contact form */
+
+
+/* footer */
+
+
+
+/* voor responsiveness */
+
+
+@media (min-width: 768px) {
+  .site-menu {
+    display: none;
+  }
+  .selfie {
+    width: 500px;
+    padding-left: 50%;
+  }
+  .section {
+    padding-right: 25%;
+    margin-bottom: 20%;
+  }
+  .form {
+    margin-bottom: 20%;
+  }
+  .site-footer > div {
+    margin: 10px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

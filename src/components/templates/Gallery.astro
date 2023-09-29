@@ -1,0 +1,176 @@
+---
+import GalleryItem from "../organisms/GalleryItem.astro";
+
+//styles import
+import "../css/main.css";
+import "../css/colors.css";
+import "../css/typography.css";
+---
+
+<div x-data class="site-main">
+  <div x-intersect.threshold.50="" x-cloak class="gallery-1">
+    <GalleryItem
+      title="Mudra - 2016"
+      image="/src/picca/sketches/sketching-1-2016.png"
+      alt="Mudra - 2016"
+    />
+    <div class="picca-2">
+      <GalleryItem
+        title="Still drawing, to be continued..."
+        image="/src/picca/gfx/stilldrawing.png"
+        alt="placeholder for new image"
+      />
+      <span class="description">placeholder for new image</span>
+    </div>
+    <div class="picca-3">
+      <img
+        src="/src/picca/gfx/stilldrawing.png"
+        alt="placeholder for new image"
+      />
+      <span class="description">placeholder for new image</span>
+    </div>
+    <div class="picca-4">
+      <img
+        src="/src/picca/2020-2022/illustration-spaceranger677.png"
+        alt="Illustration Space Ranger 667 - 2021"
+      />
+      <span class="description">Illustration Space Ranger 667 - 2021</span>
+    </div>
+    <div class="picca-5">
+      <img src="/src/picca/selfportrait2015.jpg" alt="Selfportrait - 2015" />
+      <span class="description">Selfportrait - 2015</span>
+    </div>
+    <div class="picca-6">
+      <img
+        src="/src/picca/sketches/sketching-2021.png"
+        alt="D&D Character Gromar Hafden sketch - 2021"
+      />
+      <span class="description">D&D Character Gromar Hafden sketch - 2021</span>
+    </div>
+    <div class="picca-7">
+      <img
+        src="/src/picca/sketches/sketching-2-2016.jpg"
+        alt="Sketching from reference - 2016"
+      />
+      <span class="description">Sketching from reference - 2016</span>
+    </div>
+    <div class="picca-8">
+      <img
+        src="/src/picca/gfx/stilldrawing.png"
+        alt="placeholder for new image"
+      />
+      <span class="description">placeholder for new image</span>
+    </div>
+    <div class="picca-9">
+      <img
+        src="/src/picca/gfx/stilldrawing.png"
+        alt="placeholder for new image"
+      />
+      <span class="description">placeholder for new image</span>
+    </div>
+  </div>
+</div>
+<style>
+  .site-main {
+    border: 1px 0px 0px 1px dotted;
+    padding: 10px 10px 0px 10px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    max-width: 1400px;
+    grid-area: "main";
+  }
+
+  .gallery-1 {
+    padding: 1px;
+    display: grid;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1400px;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 300px;
+    grid-area: "main";
+  }
+
+  .gallery-1 > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  /* .gallery-1 > div:hover {
+  transform: scale(1.2);
+  transition: width 1s;
+} */
+
+  .gallery-1 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: rgb(100, 153, 100);
+  }
+
+  .description {
+    display: none;
+    position: absolute;
+  }
+
+  .picca-1 {
+    flex: 1;
+    order: 1;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .picca-2 {
+    flex: 2;
+    order: 4;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .picca-3 {
+    flex: 3;
+    order: 3;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .picca-4 {
+    flex: 4;
+    order: 1;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .picca-5 {
+    flex: 5;
+    order: 1;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .picca-6 {
+    flex: 6;
+    order: 1;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .picca-7 {
+    flex: 7;
+    order: 1;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .picca-8 {
+    flex: 8;
+    order: 1;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .picca-9 {
+    flex: 9;
+    order: 1;
+    border-radius: 10px;
+    padding: 5px;
+  }
+</style>

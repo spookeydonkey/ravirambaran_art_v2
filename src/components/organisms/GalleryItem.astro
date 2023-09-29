@@ -1,0 +1,52 @@
+---
+// components import
+import Gallery from "../templates/Gallery.astro";
+
+//styles import
+import "../../css/main.css";
+import "../../css/colors.css";
+import "../../css/typography.css";
+import "../../css/sizing.css";
+
+// scripts imports
+
+const { title, image, alt, body, href } = Astro.props;
+---
+
+<div
+  class="picca blur-load"
+  style="background-image: url(/src/picca/sketches/sketching-1-2016_small.png)"
+>
+  <a href={href}
+    ><img src={image} alt={alt} loading="lazy" />
+    <span class="description">{title}</span></a
+  >
+</div>
+
+<style>
+  .picca {
+    max-width: 100%;
+    height: auto;
+    flex: 1;
+    order: 1;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .description {
+    display: none;
+    position: absolute;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .blur-load {
+    background-size: cover;
+    background-position: center;
+    /* filter: blur(10px);
+        transition: filter 0.5s ease-in-out; */
+  }
+</style>

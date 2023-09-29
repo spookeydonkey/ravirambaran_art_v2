@@ -1,0 +1,21 @@
+---
+//styles import
+import "../../css/main.css";
+import "../../css/colors.css";
+import "../../css/typography.css";
+import "../../css/sizing.css";
+
+// scripts imports
+const { href, title, body, image, alt } = Astro.props;
+---
+
+<li class="">
+  <a href={href} target="_blank" title={alt}>
+    <img src={image} alt={alt} height="var(--s0)" />
+  </a>
+</li>
+
+<style></style>
+<script>
+  
+</script>

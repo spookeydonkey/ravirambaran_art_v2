@@ -1,0 +1,19 @@
+---
+const { title, description } = Astro.props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/logorlm.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto:wght@100;300&family=Varela+Round&display=swap"
+    rel="stylesheet"
+  />
+  <meta name="generator" content={Astro.generator} />
+
+  <title>{title}</title>
+</head>

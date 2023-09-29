@@ -1,0 +1,52 @@
+:root {
+    --accent: 124, 58, 237;
+    --accent-gradient: linear-gradient(45deg,
+            rgb(var(--accent)),
+            #da62c4 30%,
+            white 60%);
+
+    /* background colors */
+    --bg-color: hsl(200,
+            18%,
+            32%);
+    --bg-color-dark: hsl(0, 0%, 20%);
+    --bg-color-light: hsl(0, 0%, 96.5%);
+
+
+    /* text colors */
+    --text-color: rgb(32, 49, 32);
+    --text-color-light: rgb(32, 49, 32);
+    --text-color-dark: rgb(32, 49, 32);
+
+    /* heading colors */
+    --heading-color: rgb(32, 49, 32);
+    --heading-color-light: rgb(32, 49, 32);
+    --heading-color-dark: rgb(32, 49, 32);
+
+    /* border colors */
+    --border-color: rgb(32, 49, 32);
+    --border-color-light: rgb(32, 49, 32);
+    --border-color-dark: rgb(32, 49, 32);
+
+    /* box-shadow colors */
+    --shadow-color: rgb(32, 49, 32);
+    --shadow-color-light: rgb(32, 49, 32);
+    --shadow-color-dark: rgb(32, 49, 32);
+
+    /* button colors */
+    --btn-color: rgb(32, 49, 32);
+    --btn-color-light: rgb(32, 49, 32);
+    --btn-color-dark: rgb(32, 49, 32);
+
+    /* link colors */
+    --link-color: rgb(32, 49, 32);
+    --link-color-light: rgb(32, 49, 32);
+    --link-color-dark: rgb(32, 49, 32);
+
+    /* hover colors */
+    --hover-color: rgb(32, 49, 32);
+    --hover-color-light: rgb(32, 49, 32);
+    --hover-color-dark: rgb(32, 49, 32);
+
+
+}
