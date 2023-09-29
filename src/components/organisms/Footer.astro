@@ -16,17 +16,21 @@ import "../../css/sizing.css";
 
   <footer class="site-footer">
     <ul>
-        
-          <SocialMedia />
-          
-        
-      </ul>
+      <SocialMedia />
+    </ul>
     <CopyrightUpdate />
   </footer>
 <script>
-  
 </script>
 <style>
+  .site-footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;  
+  }
+  
   .site-footer {
     border-top: 1px dotted;
     padding: var(--s0);
@@ -38,10 +42,6 @@ import "../../css/sizing.css";
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-  }
-
-  .site-footer > div {
-    margin: 5px;
   }
 
   .site-footer a:hover {
