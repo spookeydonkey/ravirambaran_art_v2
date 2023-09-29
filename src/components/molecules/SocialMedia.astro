@@ -1,4 +1,10 @@
 ---
+// component imports
+import Link from "../atoms/Link.astro";
+
+// data imports
+import navData from "../../data/navData.js";
+
 //styles import
 import "../../css/main.css";
 import "../../css/colors.css";
@@ -7,13 +13,27 @@ import "../../css/sizing.css";
 
 // scripts imports
 const { href, title, body, image, alt } = Astro.props;
----
+const filteredNavData = navData.filter(item => item.shown && item.location === "external");
 
-<li class="">
-  <a href={href} target="_blank" title={alt}>
-    <img src={image} alt={alt} height="var(--s0)" />
-  </a>
-</li>
+---
+{
+  filteredNavData.map((item) => (
+    <li>
+    <Link 
+      title={item.name}
+      href={item.href}
+      image={item.image}
+      target="_blank" 
+      >
+        <img 
+          src={item.image} 
+          alt={item.name} 
+          height="var(--s0)" 
+          />
+    </Link>
+    </li>
+  ))
+}
 
 <style></style>
 <script>

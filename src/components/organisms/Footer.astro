@@ -1,7 +1,9 @@
 ---
-//astro imports
+//library imports
+import { Icon } from "astro-icon";
 import SocialMedia from "../molecules/SocialMedia.astro";
 import CopyrightUpdate from "../atoms/CopyrightUpdate.astro";
+import Link from "../atoms/Link.astro";
 
 //styles import
 import "../../css/main.css";
@@ -14,14 +16,11 @@ import "../../css/sizing.css";
 
   <footer class="site-footer">
     <ul>
-        <li>
-          <SocialMedia
-            href="https://www.patreon.com/spookeydonkey"
-            alt="Ravi's Patreon"
-            src="/src/picca/gfx/patreon.png"
-          />
-        </li>
-    </ul>
+        
+          <SocialMedia />
+          
+        
+      </ul>
     <CopyrightUpdate />
   </footer>
 <script>
