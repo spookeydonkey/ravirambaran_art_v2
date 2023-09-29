@@ -2,4 +2,12 @@
 --s0: 1rem;
 --s1: 1.5rem;
 --s2: 2rem;
+
+--baseline: 24px;
+
+    /* spacing values */
+    --s-5: calc(var(--baseline)/2);
+    --s0: var(--baseline);
+    --s5: calc(var(--baseline)*2);
+    --s15: calc(var(--baseline)*3);
 }
