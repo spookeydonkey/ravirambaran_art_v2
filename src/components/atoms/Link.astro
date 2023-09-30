@@ -27,6 +27,11 @@ const {
     classes,
     ...rest
 } = Astro.props as Props;
+
+// Alpine navData object replacing navData.js
+const data = () => ({
+    currentPath: window.location.pathname
+});
 ---
 
 <a
@@ -37,6 +42,8 @@ const {
         style,
         { filled: isFilled, bordered: borderVisible },
     ]}
+    data-navLink
+    x-bind:aria-current="currentPath === href ? 'page' : null"
     {...rest}
 >
     {

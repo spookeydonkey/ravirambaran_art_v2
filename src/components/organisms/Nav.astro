@@ -17,7 +17,8 @@ import "../../css/sizing.css";
 const filteredNavData = navData.filter(item => item.shown && item.location === "internal");
 ---
 
-<!--- mobiele menu ---><!-- to do: isnt sticky yet for mobile menu -->
+<!--- mobiele menu --->
+<!-- to do: isnt sticky yet for mobile menu -->
 <nav>
 	<ul class="site-nav-mobile">
 		{
@@ -48,72 +49,76 @@ const filteredNavData = navData.filter(item => item.shown && item.location === "
 	</ul>
 </nav>
 <script>
-	import "../../js/nav.js";
+	import "../../scripts/js/nav.js";
 </script>
 <style>
+	.site-nav,
+	.site-nav-mobile {
+	color: rgb(32, 49, 32);
+	font-family: "Libre Baskerville", serif;
+	font-size: 18px;
+	text-align: center;
+	}
+
 	.site-nav {
-		color: rgb(32, 49, 32);
-		font-family: "Libre Baskerville", serif;
-		font-size: 18px;
-		border-bottom: 1px dotted;
-		padding: 12px;
-		grid-area: nav;
-		text-align: center;
-		display: flex;
-		justify-content: center;
+	border-bottom: 1px dotted;
+	padding: 12px;
+	grid-area: nav;
+	display: flex;
+	justify-content: center;
 	}
 
 	.site-nav > div {
-		text-decoration: none;
-		margin: 10px;
+	text-decoration: none;
+	margin: 10px;
 	}
 
-	.site-nav a:hover {
-		border-bottom: 1px black dotted;
+	.site-nav a:hover,
+	.site-nav a.active {
+	border-bottom: 1px black dotted;
 	}
 
 	.site-nav a.active {
-		border-bottom: 1px black dotted;
-		color: rgb(100, 153, 100);
+	color: rgb(100, 153, 100);
 	}
+
 	.site-nav-mobile {
-		background-color: white;
-		font-family: "Libre Baskerville", serif;
-		color: rgb(32, 49, 32);
-		padding: 0px;
-		border: 0px 0px 1px 0px dotted;
-		width: 1fr;
-		font-size: 18px;
-		top: 0;
-		position: sticky;
-		grid-area: mobmenu;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		text-align: center;
+	background-color: white;
+	padding: 0px;
+	border: 0px 0px 1px 0px dotted;
+	width: 1fr;
+	top: 0;
+	position: sticky;
+	grid-area: mobmenu;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	}
 
 	.site-nav-mobile > div {
-		margin: 10px;
+	margin: 10px;
 	}
 
-	.site-nav-mobile a:hover {
-		border-bottom: 1px black dotted;
+	.site-nav-mobile a:hover,
+	.site-nav-mobile a.active {
+	border-bottom: 1px black dotted;
 	}
 
 	.site-nav-mobile a.active {
-		border-bottom: 1px black dotted;
-		color: rgb(100, 153, 100);
+	color: rgb(100, 153, 100);
 	}
+
 	@media (max-width: 767px) {
-		.site-nav {
-			display: none;
+	.site-nav {
+		display: none;
 		}
 	}
+
 	@media (min-width: 768px) {
-		.site-nav-mobile {
-			display: none;
+	.site-nav-mobile {
+		display: none;
 		}
+	}
 		/* .selfie {
 			width: 500px;
 			padding-left: 50%;
@@ -128,5 +133,5 @@ const filteredNavData = navData.filter(item => item.shown && item.location === "
 		.site-footer > div {
 			margin: 10px;
 		} */
-	}
+	
 </style>

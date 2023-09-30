@@ -1,22 +1,13 @@
-:root {
-  --s0: 1rem;
-
-}
 
 /* css reset  */
 /*
 1. Use a more-intuitive box-sizing model.
+2. Remove default margin
 */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/*
-2. Remove default margin
-*/
-* {
   margin: 0;
 }
 
@@ -26,10 +17,6 @@
 html,
 body {
   height: 100%;
-  
-}
-
-html {
   font-size: 62.5%; /* (62.5/100) * 16px = 10px */
   -webkit-text-size-adjust: none;
   /* for iOS Safari */
@@ -98,15 +85,14 @@ h6 {
 
 menu:not(article menu),
 ol:not(article ol),
-ul:not(article ul) {
-  list-style: none;
-}
-
+ul:not(article ul),
 menu,
 ol,
 ul {
+  list-style: none;
   padding-left: 0;
 }
+
 a {
   /* Places underlines below the descenders */
   text-underline-position: under;  
@@ -181,27 +167,52 @@ code {
 
 
 /* voor responsiveness */
+.site-menu {
+  display: none;
+}
 
+.selfie {
+  width: 50%;
+  padding-left: 25%;
+}
 
-@media (min-width: 768px) {
+.section {
+  padding-right: 12.5%;
+  margin-bottom: 10%;
+}
+
+.form {
+  margin-bottom: 10%;
+}
+
+.site-footer>div {
+  margin: 5%;
+}
+
+@media (max-width: 767px) {
   .site-menu {
-    display: none;
+    display: block;
   }
+
   .selfie {
-    width: 500px;
-    padding-left: 50%;
+    width: 100%;
+    padding-left: 0;
   }
+
   .section {
-    padding-right: 25%;
-    margin-bottom: 20%;
+    padding-right: 0;
+    margin-bottom: 5%;
   }
+
   .form {
-    margin-bottom: 20%;
+    margin-bottom: 5%;
   }
-  .site-footer > div {
-    margin: 10px;
+
+  .site-footer>div {
+    margin: 2.5%;
   }
 }
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;

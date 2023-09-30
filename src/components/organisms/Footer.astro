@@ -14,23 +14,15 @@ import "../../css/sizing.css";
 // scripts imports
 ---
 
-  <footer class="site-footer">
-    <ul>
-      <SocialMedia />
-    </ul>
-    <CopyrightUpdate />
-  </footer>
+<footer class="site-footer">
+  <ul>
+    <SocialMedia />
+  </ul>
+  <CopyrightUpdate />
+</footer>
 <script>
 </script>
 <style>
-  .site-footer ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;  
-  }
-  
   .site-footer {
     border-top: 1px dotted;
     padding: var(--s0);
@@ -39,14 +31,18 @@ import "../../css/sizing.css";
     max-width: 1400px;
     grid-area: footer;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-  }
+    }
+
+  .site-footer ul {
+    list-style: none;
+    display: inherit;
+    flex-wrap: inherit;
+    }
 
   .site-footer a:hover {
-    border-bottom: 1px dotted rgb(100, 153, 100);
-  }
-
+    border-bottom: 1px dotted hsl(100, 40%, 60%);
+    }
 
 </style>

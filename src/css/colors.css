@@ -1,52 +1,65 @@
 :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(45deg,
-            rgb(var(--accent)),
-            #da62c4 30%,
-            white 60%);
+        /* accent colors */
+        --accent: hsl(292, 25%, 38%);
+        --accent-gradient: linear-gradient(45deg,
+                        var(--clr1),
+                        var(--clr2) 20%,
+                        var(--clr2) 50%,
+                        var(--clr3) 70%,
+                        var(--clr4) 85%,
+                        var(--clr5));
 
-    /* background colors */
-    --bg-color: hsl(200,
-            18%,
-            32%);
-    --bg-color-dark: hsl(0, 0%, 20%);
-    --bg-color-light: hsl(0, 0%, 96.5%);
+        /* background colors */
+        --bg-clr: hsl(0, 0%, 96.5%);
+        --bg-clr-dark: hsl(30, 33%, 63%);
+        --bg-clr-light: hsl(179, 40%, 90%);
 
+        /* text colors */
+        --text-clr: hsl(292, 25%, 38%);
+        --text-clr-light: hsl(200, 25%, 35%);
+        --text-clr-dark: hsl(200, 10%, 20%);
 
-    /* text colors */
-    --text-color: rgb(32, 49, 32);
-    --text-color-light: rgb(32, 49, 32);
-    --text-color-dark: rgb(32, 49, 32);
+        /* heading colors */
+        --heading-clr: hsl(292, 25%, 38%);
+        --heading-clr-light: hsl(200, 25%, 50%);
+        --heading-clr-dark: hsl(200, 10%, 35%);
 
-    /* heading colors */
-    --heading-color: rgb(32, 49, 32);
-    --heading-color-light: rgb(32, 49, 32);
-    --heading-color-dark: rgb(32, 49, 32);
+        /* border colors */
+        --border-clr: hsl(200, 25%, 50%);
+        --border-clr-light: hsl(200, 25%, 70%);
+        --border-clr-dark: hsl(200, 10%, 20%);
 
-    /* border colors */
-    --border-color: rgb(32, 49, 32);
-    --border-color-light: rgb(32, 49, 32);
-    --border-color-dark: rgb(32, 49, 32);
+        /* box-shadow colors */
+        --shadow-clr: hsl(200, 25%, 50%);
+        --shadow-clr-light: hsl(200, 25%, 70%);
+        --shadow-clr-dark: hsl(200, 10%, 20%);
 
-    /* box-shadow colors */
-    --shadow-color: rgb(32, 49, 32);
-    --shadow-color-light: rgb(32, 49, 32);
-    --shadow-color-dark: rgb(32, 49, 32);
+        /* button colors */
+        --btn-clr: hsl(353, 25%, 47%);
+        --btn-clr-light: hsl(178, 41%, 72%);
+        --btn-clr-dark: hsl(178, 41%, 52%);
 
-    /* button colors */
-    --btn-color: rgb(32, 49, 32);
-    --btn-color-light: rgb(32, 49, 32);
-    --btn-color-dark: rgb(32, 49, 32);
+        /* link colors */
+        --link-clr: hsl(178, 41%, 62%);
+        --link-clr-light: hsl(178, 41%, 72%);
+        --link-clr-dark: hsl(178, 41%, 52%);
 
-    /* link colors */
-    --link-color: rgb(32, 49, 32);
-    --link-color-light: rgb(32, 49, 32);
-    --link-color-dark: rgb(32, 49, 32);
+        /* hover colors */
+        --hover-clr: hsl(178, 41%, 72%);
+        --hover-clr-light: hsl(178, 41%, 82%);
+        --hover-clr-dark: hsl(178, 41%, 62%);
 
-    /* hover colors */
-    --hover-color: rgb(32, 49, 32);
-    --hover-color-light: rgb(32, 49, 32);
-    --hover-color-dark: rgb(32, 49, 32);
-
-
+        /* new colors */
+        --clr1: hsl(270, 20%, 28%);
+        --clr2: hsl(311, 25%, 45%);
+        --clr3: hsl(352, 45%, 57%);
+        --clr4: hsl(17, 75%, 63%);
+        --clr5: hsl(43, 100%, 63%);
+        --clr6: hsl(58, 100%, 80%);
+        --clr7: hsl(270, 20%, 28%);
+        --clr8: hsl(226, 25%, 52%);
+        --clr9: hsl(226, 25%, 52%);
+        --clr10: hsl(187, 100%, 42%);
+        --clr11: hsl(178, 65%, 50%);
+        --clr12: hsl(168, 50%, 55%);
 }

@@ -29,9 +29,10 @@ const { title, image, alt, body, href } = Astro.props;
     height: auto;
     flex: 1;
     order: 1;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: var(--border-radius);
+    padding: var(--s1);
   }
+
   .description {
     display: none;
     position: absolute;
@@ -41,7 +42,7 @@ const { title, image, alt, body, href } = Astro.props;
     height: 100%;
     object-position: center;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
   }
   .blur-load {
     background-size: cover;

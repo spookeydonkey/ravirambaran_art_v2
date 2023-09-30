@@ -1,13 +1,18 @@
 :root {
---s0: 1rem;
---s1: 1.5rem;
---s2: 2rem;
-
---baseline: 24px;
-
     /* spacing values */
-    --s-5: calc(var(--baseline)/2);
-    --s0: var(--baseline);
-    --s5: calc(var(--baseline)*2);
-    --s15: calc(var(--baseline)*3);
+    --s-1: calc(var(--s0) / 2);
+    --s-2: var(--s-1);
+    --s0: 1rem;
+    --s1: calc(var(--s0) * 1.5);
+    --s2: calc(var(--s0) * 2);
+    --s3: calc(var(--s0) * 3);
+    --s4: calc(var(--s0) * 4);
+    --s5: calc(var(--s0) * 6);
+
+    /* border radius */
+    --border-radius-sm: calc(var(--s0) / 12);
+    --border-radius: calc(var(--s0) / 6);
+    --border-radius-md: calc(var(--s0) / 4);
+    --border-radius-lg: calc(var(--s0) / 3);
+    --border-radius-xl: calc(var(--s0) / 2);
 }
