@@ -2,7 +2,7 @@
 // component imports
 import MainLayout from "../../layouts/MainLayout.astro";
 
-// data importsnpm
+// data imports
 import { Image } from "astro:assets";
 import { getCollection, CollectionEntry } from "astro:content";
 
@@ -26,7 +26,7 @@ type Props = {
 };
 
 const { entry } = Astro.props;
-const { Content } = await entry.rennder;
+const { Content } = await entry.render();
 ---
 
 <MainLayout title="">
@@ -38,5 +38,7 @@ const { Content } = await entry.rennder;
     height={1024 / 1.5}
     format="webp"
   />
-  <Content />
+  <div>
+    <Content />
+  </div>
 </MainLayout>

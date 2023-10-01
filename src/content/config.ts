@@ -6,7 +6,7 @@ const entriesCollection = defineCollection({
     schema: ({image}) => z.object({
         author: z.string(),
         date: z.string().optional(),
-        image: image(),
+        image: image().optional(),
         title: z.string(),
         tags: z.array(z.string().optional()),
         description: z.string().optional(),

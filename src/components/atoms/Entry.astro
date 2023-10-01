@@ -6,7 +6,7 @@ import { Image, type AstroAssets } from "astro:assets";
 import { getEntryBySlug, type CollectionEntry } from "astro:content";
 
 type Props = {
-  entry: CollectionEntry<"blog">;
+  entry: CollectionEntry<"entries">;
 };
 
 const { entry } = Astro.props;
@@ -16,8 +16,8 @@ const { entry } = Astro.props;
   <a href={`/about/${entry.slug}`}>
     <Image
       src={entry.data.image}
-      width={600}
-      height={600 / 1.5}
+      width={300}
+      height={300 / 1.5}
       alt={entry.data.title}
       format="webp"
     />
@@ -31,3 +31,8 @@ const { entry } = Astro.props;
     {entry.body}
   </p>
 </article>
+<style>
+  h2 {
+    font-size: var(--h4);
+  }
+</style>
