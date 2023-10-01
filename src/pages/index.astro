@@ -8,6 +8,8 @@ import "../css/main.css";
 import "../css/colors.css";
 import "../css/typography.css";
 import "../css/sizing.css";
+import GalleryItem from "../components/organisms/GalleryItem.astro";
+import Gallery from "../components/templates/Gallery.astro";
 
 // scripts imports
 const { href, title, body, image, alt, description } = Astro.props;
@@ -19,28 +21,40 @@ const { href, title, body, image, alt, description } = Astro.props;
       This website is still in development, but working, so...: Hello world!<br
       />
     </p>
-    <ul role="list" class="link-card-grid">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
+    <Gallery>
+      <!-- <ul role="list" class="link-card-grid"> -->
+      <GalleryItem
+        title="Mudra - 2016"
+        image="/src/picca/sketches/sketching-1-2016.png"
+        alt="Mudra - 2016"
+        path="/mudra"
       />
-      <Card
+      <GalleryItem
         href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
+        image="/src/picca/sketches/sketching-1-2016.png"
+        alt="Mudra - 2016"
+        path="/mudra"
       />
-      <Card
+      <GalleryItem
         href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
+        image="/src/picca/sketches/sketching-1-2016.png"
+        alt="Mudra - 2016"
+        path="/mudra"
       />
-      <Card
+      <GalleryItem
         href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
+        image="/src/picca/sketches/sketching-1-2016.png"
+        alt="Mudra - 2016"
+        path="/mudra"
       />
-    </ul>
+      <GalleryItem
+        href="https://astro.build/chat/"
+        image="/src/picca/sketches/sketching-1-2016.png"
+        alt="Mudra - 2016"
+        path="/mudra"
+      />
+    </Gallery>
+    <!-- </ul> -->
   </main>
 </MainLayout>
 
@@ -51,25 +65,15 @@ const { href, title, body, image, alt, description } = Astro.props;
     width: 800px;
     max-width: calc(100% - 2rem);
     background-color: var(--bg-color);
-    color: white;
-    font-size: 20px;
+    color: var(--text-color);
+    font-size: var(--text-s0);
     line-height: 1.6;
   }
-  .astro-a {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 220px;
-    height: auto;
-    z-index: -1;
-  }
+
   h1 {
-    font-size: 4rem;
-    font-weight: 700;
     line-height: 1;
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: var(--s0);
   }
   .text-gradient {
     background-image: var(--accent-gradient);
@@ -77,32 +81,5 @@ const { href, title, body, image, alt, description } = Astro.props;
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
-  }
-  .instructions {
-    margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-    );
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-  .instructions code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-  .instructions strong {
-    color: rgb(var(--accent-light));
-  }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 2rem;
-    padding: 0;
   }
 </style>

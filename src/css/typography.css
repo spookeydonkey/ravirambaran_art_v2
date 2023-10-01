@@ -8,16 +8,20 @@
     --text-scale-ratio: 1.2;
 
     /* type scale */
-    --text-s-4: calc(var(--text-base-size) / (var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio))) / 16;
-    --text-s-3: calc(var(--text-base-size) / (var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio))) / 16;
-    --text-s-2: calc(var(--text-base-size) / (var(--text-scale-ratio) * var(--text-scale-ratio))) / 16;
-    --text-s-1: calc(var(--text-base-size) / var(--text-scale-ratio)) / 16;
-    --text-s0: var(--text-base-size) / 16;
-    --text-s1: calc(var(--text-base-size) * var(--text-scale-ratio)) / 16;
-    --text-s2: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio)) / 16;
-    --text-s3: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)) / 16;
-    --text-s4: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)) / 16;
-
+    --text-s-6: calc(var(--text-base-size) / (var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --text-s-5: calc(var(--text-base-size) / (var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --text-s-4: calc(var(--text-base-size) / (var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --text-s-3: calc(var(--text-base-size) / (var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --text-s-2: calc(var(--text-base-size) / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --text-s-1: calc(var(--text-base-size) / var(--text-scale-ratio));
+    --text-s0: var(--text-base-size);
+    --text-s1: calc(var(--text-base-size) * var(--text-scale-ratio));
+    --text-s2: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-s3: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-s4: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-s5: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-s6: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    
     /* heading sizes */
     --h1: calc(var(--text-base-size) * 2);
     --h2: calc(var(--text-s3) * 2);
@@ -27,13 +31,13 @@
     --h6: calc(var(--text-s-1) * 0.8);
 
     /* humongous sizes */
-    --humongous-1: calc(var(--text-s4) * 4);
-    --humongous-2: calc(var(--text-s4) * 3);
-    --humongous-3: calc(var(--text-s4) * 2.5);
+    --humongous-7: calc(var(--text-s4) * 4);
+    --humongous-6: calc(var(--text-s4) * 3);
+    --humongous-5: calc(var(--text-s4) * 2.5);
     --humongous-4: calc(var(--text-s4) * 2);
-    --humongous-5: calc(var(--text-s4) * 1.5);
-    --humongous-6: calc(var(--text-s4) * 1.25);
-    --humongous-7: calc(var(--text-base-size) * 2);
+    --humongous-3: calc(var(--text-s4) * 1.5);
+    --humongous-2: calc(var(--text-s4) * 1.25);
+    --humongous-1: calc(var(--text-base-size) * 2);
 
     /* apply type scale to HTML elements */
     h1 {

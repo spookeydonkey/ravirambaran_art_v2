@@ -14,116 +14,139 @@ import "../../css/colors.css";
 import "../../css/typography.css";
 import "../../css/sizing.css";
 
-const filteredNavData = navData.filter(item => item.shown && item.location === "internal");
+const filteredNavData = navData.filter(
+  (item) => item.shown && item.location === "internal"
+);
 ---
 
-<!--- mobiele menu --->
-<!-- to do: isnt sticky yet for mobile menu -->
-<nav>
-	<ul class="site-nav-mobile">
-		{
-			filteredNavData.map((item) => (
-				<Link
-					text={item.name}
-					href={item.path}
-					style="secondary"
-					isFilled={false}
-					data-navLink
-				/>
-			))
-		}
-	</ul>
+<nav class="">
+  <a href={"/"} class="logo"
+    ><Icon name="logorlm" side="right" width="60" alt="Ravi Rambaran Art" />
+  </a>
+  <ul class="site-nav-mobile">
+    {
+      filteredNavData.map((item) => (
+        <li>
+          <Link
+            text={item.name}
+            href={item.path}
+            style="secondary"
+            isFilled={false}
+            data-navLink
+          />
+        </li>
+      ))
+    }
+  </ul>
 
-	<ul class="site-nav">
-		{
-			filteredNavData.map((item) => (
-				<Link
-					text={item.name}
-					href={item.path}
-					style="secondary"
-					isFilled={false}
-					data-navLink
-				/>
-			))
-		}
-	</ul>
+  <ul class="site-nav">
+    {
+      filteredNavData.map((item) => (
+        <li>
+          <Link
+            text={item.name}
+            href={item.path}
+            style="secondary"
+            isFilled={false}
+            data-navLink
+          />
+        </li>
+      ))
+    }
+  </ul>
 </nav>
+
 <script>
-	import "../../scripts/js/nav.js";
+  import "../../scripts/js/nav.js";
 </script>
 <style>
-	.site-nav,
-	.site-nav-mobile {
-	color: rgb(32, 49, 32);
-	font-family: "Libre Baskerville", serif;
-	font-size: 18px;
-	text-align: center;
-	}
+  nav {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: var(--s0);
+    width: 100%;
+    background-color: var(--bg-clr);
+    z-index: 1;
+    transition: transform 1s ease-in-out;
+  }
 
-	.site-nav {
-	border-bottom: 1px dotted;
-	padding: 12px;
-	grid-area: nav;
-	display: flex;
-	justify-content: center;
-	}
+  nav.sticky-nav.hide {
+    transform: translateY(-100%);
+  }
 
-	.site-nav > div {
-	text-decoration: none;
-	margin: 10px;
-	}
+  .site-nav,
+  .site-nav-mobile {
+    color: var(--text-clr);
+    font:
+      var(--text-s0) var(--font-secondary),
+      serif;
+    text-align: center;
+  }
 
-	.site-nav a:hover,
-	.site-nav a.active {
-	border-bottom: 1px black dotted;
-	}
+  .site-nav {
+    border-bottom: 1px dotted;
+    padding: var(--s-1);
+    display: flex;
+    justify-content: center;
+  }
 
-	.site-nav a.active {
-	color: rgb(100, 153, 100);
-	}
+  .site-nav > div,
+  .site-nav-mobile > div {
+    margin: var(--s-2);
+  }
 
-	.site-nav-mobile {
-	background-color: white;
-	padding: 0px;
-	border: 0px 0px 1px 0px dotted;
-	width: 1fr;
-	top: 0;
-	position: sticky;
-	grid-area: mobmenu;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	}
+  .site-nav a,
+  .site-nav-mobile a {
+    text-decoration: none;
+    border-bottom: 1px transparent dotted;
+  }
 
-	.site-nav-mobile > div {
-	margin: 10px;
-	}
+  .site-nav a:hover,
+  .site-nav a.active,
+  .site-nav-mobile a:hover,
+  .site-nav-mobile a.active {
+    border-bottom-color: var(--border-clr);
+  }
 
-	.site-nav-mobile a:hover,
-	.site-nav-mobile a.active {
-	border-bottom: 1px black dotted;
-	}
+  .site-nav a.active,
+  .site-nav-mobile a.active {
+    color: var(--accent);
+  }
 
-	.site-nav-mobile a.active {
-	color: rgb(100, 153, 100);
-	}
+  ul.site-nav-mobile {
+  }
+  .site-nav-mobile {
+    padding: 0;
+    border-bottom: 1px dotted;
+    width: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-	@media (max-width: 767px) {
-	.site-nav {
-		display: none;
-		}
-	}
+  @media (max-width: 767px) {
+    .site-nav {
+      display: none;
+    }
+  }
 
-	@media (min-width: 768px) {
-	.site-nav-mobile {
-		display: none;
-		}
-	}
-		/* .selfie {
+  @media (min-width: 768px) {
+    .site-nav-mobile {
+      display: none;
+    }
+    nav > svg {
+      display: none;
+    }
+  }
+  /* .selfie {
 			width: 500px;
 			padding-left: 50%;
 		} */
-		/* .section {
+  /* .section {
 			padding-right: 25%;
 			margin-bottom: 20%;
 		}
@@ -133,5 +156,4 @@ const filteredNavData = navData.filter(item => item.shown && item.location === "
 		.site-footer > div {
 			margin: 10px;
 		} */
-	
 </style>

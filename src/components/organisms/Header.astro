@@ -6,44 +6,50 @@ import "../../css/main.css";
 import "../../css/colors.css";
 import "../../css/typography.css";
 import "../../css/sizing.css";
-
 ---
 
 <h1>
-    <a href="/" class="logorlm text-gradient" aria-label="Go home">
-        <Icon name="logorlm" side="left" width="60" alt="Ravi Rambaran Art" />
-    </a>
-    Ravi Rambaran Art
+  <a href="/" class="logorlm text-gradient" aria-label="Go home">
+    <Icon name="logorlm" side="left" width="60" alt="Ravi Rambaran Art" />
+  </a>
+   Ravi Rambaran Art
 </h1>
 
 <style>
-    .logorlm {
-        display: flex;
-        align-items: center;
-    }
+  .logorlm {
+    display: flex;
+    align-items: center;
+  }
 
-    h1 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 1rem;
-        overflow: hidden;
-        max-width: 1400px;
-        font-family: "Libre Baskerville", serif;
-        border-bottom: 1px rgb(32, 49, 32) dotted;
-        /* height: 1fr; */
-        /* margin: 0 auto; */
-        padding: 1px;
-        /* display: grid; */
-        /* grid-area: header; */
-        overflow: hidden;
-        text-align: center;
-    }
-     .text-gradient {
+  h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    overflow: hidden;
+    max-width: 1400px;
+    font-family: "Libre Baskerville", serif;
+    border-bottom: 1px rgb(32, 49, 32) dotted;
+    padding: 1px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
+  }
+
+  @media (max-width: 767px) {
+    h1 {
+      display: none;
+    }
+
+    .logorlm {
+      justify-content: center;
+    }
   }
 </style>

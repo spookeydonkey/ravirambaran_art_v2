@@ -13,15 +13,10 @@ import "../../css/sizing.css";
 const { title, image, alt, body, href } = Astro.props;
 ---
 
-<div
-  class="picca blur-load"
-  style="background-image: url(/src/picca/sketches/sketching-1-2016_small.png)"
+<a href={href}
+  ><img src={image} alt={alt} loading="lazy" width="" />
+  <span class="description">{title}</span></a
 >
-  <a href={href}
-    ><img src={image} alt={alt} loading="lazy" />
-    <span class="description">{title}</span></a
-  >
-</div>
 
 <style>
   .picca {

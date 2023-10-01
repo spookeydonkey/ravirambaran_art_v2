@@ -12,34 +12,34 @@ import "../../css/typography.css";
 import "../../css/sizing.css";
 
 // scripts imports
-const { href, title, body, image, alt } = Astro.props;
-const filteredNavData = navData.filter(item => item.shown && item.location === "external");
-
+const { href, title, body, image, alt, target } = Astro.props;
+const filteredNavData = navData.filter(
+  (item) => item.shown && item.location === "external"
+);
 ---
+
 {
   filteredNavData.map((item) => (
     <li>
-    <Link 
-      title={item.name}
-      href={item.href}
-      image={item.image}
-      target="_blank" 
+      <Link
+        href={item.href}
+        text={""}
+        style="secondary"
+        title={item.name}
+        image={item.image}
+        target="_blank"
+        alt={item.name}
+        currentPath={item.path}
       >
-        <img 
-          src={item.image} 
-          alt={item.name} 
-          height="var(--s0)" 
-          />
-    </Link>
+        <img src={item.image} alt={item.name} height="var(--s0)" />
+      </Link>
     </li>
   ))
 }
 
 <style>
   li {
-    padding: var(--s-5);
+    padding: var(--s0);
   }
 </style>
-<script>
-  
-</script>
+<script></script>

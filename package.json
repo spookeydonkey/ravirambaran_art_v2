@@ -16,6 +16,7 @@
     "astro-icon": "^0.8.1",
     "astro-netlify-cms": "^0.0.1",
     "kraken-css": "^13.0.0",
+    "magic-grid": "^3.2.4",
     "normalize.css": "^8.0.1",
     "postcss-loader": "^7.3.3",
     "postcss-media-minmax": "^5.0.0",

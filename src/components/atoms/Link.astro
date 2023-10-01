@@ -3,64 +3,86 @@
 import { Icon } from "astro-icon";
 
 interface Props {
-    text: string;
-    href: string;
-    style: "primary" | "secondary" | "tertiary";
-    image?: string;
-    icon?: {
-        name: string;
-        side: "left" | "right";
-    };
-    isFilled?: boolean;
-    borderVisible?: boolean;
-    classes?: string;
+  text: string;
+  title?: string;
+  href: string;
+  style: "primary" | "secondary" | "tertiary";
+  image?: string;
+  icon?: {
+    name: string;
+    side: "left" | "right";
+  };
+  isFilled?: boolean;
+  borderVisible?: boolean;
+  classes?: string;
+  target?: string;
+  alt?: string;
+  currentPath?: string;
 }
 
 const {
-    text,
-    href,
-    style,
-    icon,
-    image,
-    isFilled = true,
-    borderVisible = false,
-    classes,
-    ...rest
+  text,
+  title,
+  href,
+  style,
+  icon,
+  image,
+  isFilled = true,
+  borderVisible = false,
+  classes,
+  target,
+  alt,
+  currentPath,
+  ...rest
 } = Astro.props as Props;
 
-// Alpine navData object replacing navData.js
+// Alpine navData object replacing nav.js
 const data = () => ({
-    currentPath: window.location.pathname
+  currentPath: window.location.pathname,
 });
 ---
 
 <a
-    href={href}
-    class:list={[
-        "link",
-        classes,
-        style,
-        { filled: isFilled, bordered: borderVisible },
-    ]}
-    data-navLink
-    x-bind:aria-current="currentPath === href ? 'page' : null"
-    {...rest}
+  href={href}
+  class:list={[
+    "link",
+    classes,
+    style,
+    { filled: isFilled, bordered: borderVisible },
+  ]}
+  data-navLink
+  x-bind:aria-current={currentPath === href ? "page" : null}
+  target={target}
+  {...rest}
 >
-    {
-        icon && icon.side === "left" && (
-            <Icon name={icon.name} height="24" width="24" />
-        )
-    }
+  {
+    icon && icon.side === "left" && (
+      <a href={href}>
+        <Icon name={icon.name} height="24" width="24" />
+      </a>
+    )
+  }
 
-    {image && (
-        <img src={image} alt={text} height="35" width="35" />
-    )}
+  {
+    image && (
+      <img
+        src={image}
+        alt={alt || text}
+        height="35"
+        width="35"
+        class="link-image"
+        {...rest}
+      />
+    )
+  }
 
-    <span>{text}</span>
+  <span>{text}</span>
 
-    {
-        icon && icon.side === "right" && (
-            <Icon name={icon.name} height="24" width="24" />
-        )
-    }
+  {
+    icon && icon.side === "right" && (
+      <a href={href}>
+        <Icon name={icon.name} height="24" width="24" />
+      </a>
+    )
+  }
 </a>
