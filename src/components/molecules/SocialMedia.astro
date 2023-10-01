@@ -4,18 +4,22 @@ import Link from "../atoms/Link.astro";
 
 // data imports
 import navData from "../../data/navData.js";
+import { socialMediaPlatforms } from "../../data/socialMediaPlatform.ts";
 
 //styles import
 import "../../css/main.css";
 import "../../css/colors.css";
 import "../../css/typography.css";
 import "../../css/sizing.css";
+import { Image } from "astro:assets";
 
 // scripts imports
 const { href, title, body, image, alt, target } = Astro.props;
-const filteredNavData = navData.filter(
-  (item) => item.shown && item.location === "external"
-);
+const filteredNavData = navData
+  .filter((item) => item.shown && item.location === "external")
+  .map((item) => ({
+    ...item,
+  }));
 ---
 
 {
@@ -31,7 +35,7 @@ const filteredNavData = navData.filter(
         alt={item.name}
         currentPath={item.path}
       >
-        <img src={item.image} alt={item.name} height="var(--s0)" />
+        <img src={item.image} alt={item.name} height={16} />
       </Link>
     </li>
   ))

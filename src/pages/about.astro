@@ -1,8 +1,13 @@
 ---
 // component imports
 
-import Blog from "../components/molecules/Blog.astro";
+import Entry from "../components/molecules/EntryList.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import EntryList from "../components/molecules/EntryList.astro";
+
+// data imports
+import { getCollection } from "astro:content";
+const entries = await getCollection("blog");
 
 //styles import
 import "../css/main.css";
@@ -15,7 +20,7 @@ import "../css/sizing.css";
   title="About Ravi Rambaran"
   description="Learn more about Ravi Rambaran"
 >
-  <Blog />
+  <EntryList entries={entries} />
 </MainLayout>
 
 <style></style>

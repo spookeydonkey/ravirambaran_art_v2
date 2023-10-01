@@ -20,7 +20,8 @@
     "normalize.css": "^8.0.1",
     "postcss-loader": "^7.3.3",
     "postcss-media-minmax": "^5.0.0",
-    "postcss-nested": "^6.0.1"
+    "postcss-nested": "^6.0.1",
+    "rehype-external-links": "^3.0.0"
   },
   "devDependencies": {
     "@zeecoder/postcss-container-query": "^3.1.0",

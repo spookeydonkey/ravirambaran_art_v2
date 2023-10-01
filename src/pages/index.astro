@@ -1,15 +1,14 @@
 ---
 // component imports
 import MainLayout from "../layouts/MainLayout.astro";
-import { ViewTransitions } from "astro:transitions";
+import GalleryItem from "../components/organisms/GalleryItem.astro";
+import Gallery from "../components/templates/Gallery.astro";
 
 //styles import
 import "../css/main.css";
 import "../css/colors.css";
 import "../css/typography.css";
 import "../css/sizing.css";
-import GalleryItem from "../components/organisms/GalleryItem.astro";
-import Gallery from "../components/templates/Gallery.astro";
 
 // scripts imports
 const { href, title, body, image, alt, description } = Astro.props;
@@ -23,36 +22,6 @@ const { href, title, body, image, alt, description } = Astro.props;
     </p>
     <Gallery>
       <!-- <ul role="list" class="link-card-grid"> -->
-      <GalleryItem
-        title="Mudra - 2016"
-        image="/src/picca/sketches/sketching-1-2016.png"
-        alt="Mudra - 2016"
-        path="/mudra"
-      />
-      <GalleryItem
-        href="https://astro.build/integrations/"
-        image="/src/picca/sketches/sketching-1-2016.png"
-        alt="Mudra - 2016"
-        path="/mudra"
-      />
-      <GalleryItem
-        href="https://astro.build/themes/"
-        image="/src/picca/sketches/sketching-1-2016.png"
-        alt="Mudra - 2016"
-        path="/mudra"
-      />
-      <GalleryItem
-        href="https://astro.build/chat/"
-        image="/src/picca/sketches/sketching-1-2016.png"
-        alt="Mudra - 2016"
-        path="/mudra"
-      />
-      <GalleryItem
-        href="https://astro.build/chat/"
-        image="/src/picca/sketches/sketching-1-2016.png"
-        alt="Mudra - 2016"
-        path="/mudra"
-      />
     </Gallery>
     <!-- </ul> -->
   </main>

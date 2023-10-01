@@ -21,20 +21,21 @@ const {
 
 <!doctype html>
 <html lang="en">
-  <MainHead {title} {description}>
-    <!-- <ViewTransitions /> -->
-    <MainHead />
-    <body>
-      <Header slot="" />
-      <Nav slot="" />
+  <MainHead {title} {description} />
+  <body>
+    <Header slot="" />
+    <Nav slot="" />
 
-      <slot />
-      <Footer slot="" />
+    <slot />
+    <Footer slot="" />
 
-      <style is:global>
-        :root {
-        }
-      </style>
-    </body>
-  </MainHead>
+    <style is:global>
+      @import "../css/main.css";
+      @import "../css/typography.css";
+      @import "../css/colors.css";
+      @import "../css/sizing.css";
+      :root {
+      }
+    </style>
+  </body>
 </html>

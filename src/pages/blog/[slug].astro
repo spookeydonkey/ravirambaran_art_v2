@@ -1,0 +1,42 @@
+---
+// component imports
+import MainLayout from "../../layouts/MainLayout.astro";
+
+// data importsnpm
+import { Image } from "astro:assets";
+import { getCollection, CollectionEntry } from "astro:content";
+
+export const getStaticPaths = async () => {
+  const entries = await getCollection("entries");
+
+  const paths = entries.map((entry) => {
+    return {
+      params: {
+        slug: entry.slug,
+      },
+      props: {
+        entry,
+      },
+    };
+  });
+  return paths;
+};
+type Props = {
+  entry: CollectionEntry<"entries">;
+};
+
+const { entry } = Astro.props;
+const { Content } = await entry.rennder;
+---
+
+<MainLayout title="">
+  <!-- <H1 text={entry.data.title} /> -->
+  <Image
+    src={entry.data.image}
+    alt={entry.data.title}
+    width={1024}
+    height={1024 / 1.5}
+    format="webp"
+  />
+  <Content />
+</MainLayout>

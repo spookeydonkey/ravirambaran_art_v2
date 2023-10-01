@@ -39,6 +39,10 @@
     --humongous-2: calc(var(--text-s4) * 1.25);
     --humongous-1: calc(var(--text-base-size) * 2);
 
+    --paragraph: var(--text-s0);
+    --small: var(--text-s-2);
+    --large: var(--text-s2);
+
     /* apply type scale to HTML elements */
     h1 {
         font-size: var(--h1);
@@ -72,6 +76,7 @@
         line-height: var(--line-height-2);
     }
 
+    
     p {
         font-size: var(--paragraph);
         font-family: var(--font-primary);
