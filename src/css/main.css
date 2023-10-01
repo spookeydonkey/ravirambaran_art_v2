@@ -24,6 +24,7 @@ body {
   /* for other mobile browsers */
   font-family: system-ui, sans-serif;
   background-color: hsl(0, 0%, 96.5%);
+  max-width: 1400px;
 }
 
 /*

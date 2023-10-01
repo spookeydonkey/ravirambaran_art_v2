@@ -1,4 +1,8 @@
 ---
+// component imports
+
+import { ViewTransitions } from "astro:transitions";
+
 const { title, description } = Astro.props;
 ---
 
@@ -16,4 +20,5 @@ const { title, description } = Astro.props;
   <meta name="generator" content={Astro.generator} />
 
   <title>{title}</title>
+  <ViewTransitions />
 </head>

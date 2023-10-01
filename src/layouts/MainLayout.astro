@@ -1,8 +1,11 @@
 ---
+// component imports
+
 import MainHead from "./MainHead.astro";
 import Footer from "../components/organisms/Footer.astro";
 import Nav from "../components/organisms/Nav.astro";
 import Header from "../components/organisms/Header.astro";
+import { ViewTransitions } from "astro:transitions";
 
 //styles import
 import "../css/main.css";
@@ -18,16 +21,20 @@ const {
 
 <!doctype html>
 <html lang="en">
-  <MainHead {title} {description} />
-  <body>
-    <Header slot="" />
-    <Nav slot="" />
-    <slot />
-    <Footer slot="" />
+  <MainHead {title} {description}>
+    <!-- <ViewTransitions /> -->
+    <MainHead />
+    <body>
+      <Header slot="" />
+      <Nav slot="" />
 
-    <style is:global>
-      :root {
-      }
-    </style>
-  </body>
+      <slot />
+      <Footer slot="" />
+
+      <style is:global>
+        :root {
+        }
+      </style>
+    </body>
+  </MainHead>
 </html>

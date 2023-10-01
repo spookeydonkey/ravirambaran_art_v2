@@ -1,0 +1,41 @@
+---
+// component imports
+
+const allEntries = await Astro.glob("../content/blog/entries/*.mdx");
+
+//styles import
+import "../../css/main.css";
+import "../../css/colors.css";
+import "../../css/typography.css";
+import "../../css/sizing.css";
+---
+
+<article class="section">
+    
+        {allEntries.map((entry) => (
+        <h3>{entry.frontmatter.title}</h3>
+        <p>Date: {entry.frontmatter.date}</p>
+        <p>Author: {entry.frontmatter.author}</p>
+        <section set:html={entry.compiledContent} />
+
+        ))
+        }
+</article>        
+<script></script>
+<style>
+  img {
+    width: 300px;
+    align-self: center;
+  }
+  .section {
+    text-align: left;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section h3 {
+    font-family: "Libre Baskerville", serif;
+    margin-bottom: 3px;
+  }
+</style>
