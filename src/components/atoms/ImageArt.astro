@@ -1,4 +1,8 @@
 ---
+import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
+import astroImage from "../../picca/sketches/sketching-1-2016.png";
+
 //styles import
 import "../../css/main.css";
 import "../../css/colors.css";
@@ -7,20 +11,20 @@ import "../../css/sizing.css";
 
 // scripts imports
 
-const { title, image, alt, href } = Astro.props;
+const { title, description, image, alt, href } = Astro.props;
 ---
+
 <div class="artwork">
-<a href={href}
-  ><img src={image} alt={alt} loading="lazy" width="200px" />
-  <span class="description">{title}</span></a
->
+  <a href={href}>
+    <Picture />
+    <Image src={astroImage} quality={"max"} />
+    <span class="description">
+      {title}
+    </span>
+  </a>
 </div>
 
 <style>
-  .artwork {
-  width: 200px;  
-  height: 200px; 
-  }
   .description {
     display: none;
   }
