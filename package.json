@@ -11,21 +11,26 @@
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.3.0",
-    "@astrojs/mdx": "^1.1.0",
-    "astro": "^3.1.4",
+    "@astrojs/check": "^0.2.0",
+    "@astrojs/mdx": "^0.19.7",
+    "astro": "^3.3.0",
     "astro-icon": "^0.8.1",
     "astro-netlify-cms": "^0.0.1",
+    "autoprefixer": "^10.4.16",
     "kraken-css": "^13.0.0",
     "magic-grid": "^3.2.4",
     "normalize.css": "^8.0.1",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
     "postcss-loader": "^7.3.3",
     "postcss-media-minmax": "^5.0.0",
     "postcss-nested": "^6.0.1",
-    "rehype-external-links": "^3.0.0"
+    "rehype-external-links": "^3.0.0",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "@zeecoder/postcss-container-query": "^3.1.0",
-    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
     "postcss-csso": "^6.0.1",
     "postcss-preset-env": "^9.1.4"
   }

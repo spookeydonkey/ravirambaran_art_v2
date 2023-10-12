@@ -1,0 +1,27 @@
+---
+//styles import
+import "../../css/main.css";
+import "../../css/colors.css";
+import "../../css/typography.css";
+import "../../css/sizing.css";
+
+// scripts imports
+
+const { title, image, alt, href } = Astro.props;
+---
+<div class="artwork">
+<a href={href}
+  ><img src={image} alt={alt} loading="lazy" width="200px" />
+  <span class="description">{title}</span></a
+>
+</div>
+
+<style>
+  .artwork {
+  width: 200px;  
+  height: 200px; 
+  }
+  .description {
+    display: none;
+  }
+</style>

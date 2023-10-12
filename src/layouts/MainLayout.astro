@@ -6,6 +6,11 @@ import Footer from "../components/organisms/Footer.astro";
 import Nav from "../components/organisms/Nav.astro";
 import Header from "../components/organisms/Header.astro";
 import { ViewTransitions } from "astro:transitions";
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
 
 //styles import
 import "../css/main.css";

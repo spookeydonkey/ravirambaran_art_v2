@@ -1,6 +1,7 @@
 ---
 // components import
 import Gallery from "../templates/Gallery.astro";
+import ImageArt from "../atoms/ImageArt.astro";
 
 //styles import
 import "../../css/main.css";
@@ -13,36 +14,6 @@ import "../../css/sizing.css";
 const { title, image, alt, body, href } = Astro.props;
 ---
 
-<a href={href}
-  ><img src={image} alt={alt} loading="lazy" width="" />
-  <span class="description">{title}</span></a
->
+<ImageArt />
 
-<style>
-  .picca {
-    max-width: 100%;
-    height: auto;
-    flex: 1;
-    order: 1;
-    border-radius: var(--border-radius);
-    padding: var(--s1);
-  }
-
-  .description {
-    display: none;
-    position: absolute;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-  }
-  .blur-load {
-    background-size: cover;
-    background-position: center;
-    /* filter: blur(10px);
-        transition: filter 0.5s ease-in-out; */
-  }
-</style>
+<style></style>
