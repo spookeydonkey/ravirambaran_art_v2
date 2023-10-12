@@ -4,7 +4,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import H1 from "../../components/atoms/H1.astro";
 
 // data imports
-import { Image } from "astro:assets";
+import { Image, Picture } from "astro:assets";
 import { getCollection, type CollectionEntry } from "astro:content";
 
 export const getStaticPaths = async () => {
@@ -32,7 +32,7 @@ const { Content } = await entry.render();
 
 <MainLayout title="">
   <H1 text={entry.data.title} />
-  <Image
+  <Picture
     src={entry.data.image}
     alt={entry.data.title}
     width={1024}
