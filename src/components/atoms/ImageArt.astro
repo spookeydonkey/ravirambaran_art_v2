@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import { Picture } from "astro:assets";
 import astroImage from "../../picca/sketches/sketching-1-2016.png";
 
 //styles import
@@ -16,8 +15,7 @@ const { title, description, image, alt, href } = Astro.props;
 
 <div class="artwork">
   <a href={href}>
-    <Picture />
-    <Image src={astroImage} quality={"max"} />
+    <Image src={astroImage} alt="Image alt" />
     <span class="description">
       {title}
     </span>
