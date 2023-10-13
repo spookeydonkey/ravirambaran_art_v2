@@ -62,6 +62,7 @@ const filteredNavData = navData.filter(
 <style>
   nav {
     display: flex;
+    gap: var(--s0);
     justify-content: space-between;
     position: sticky;
     top: 0;
@@ -81,9 +82,7 @@ const filteredNavData = navData.filter(
   .site-nav,
   .site-nav-mobile {
     color: var(--text-clr);
-    font:
-      var(--text-s0) var(--font-secondary),
-      serif;
+    font: var(--text-s0) var(--font-secondary), serif;
     text-align: center;
   }
 
@@ -92,6 +91,7 @@ const filteredNavData = navData.filter(
     padding: var(--s-1);
     display: flex;
     justify-content: center;
+    gap: var(--s1);
   }
 
   .site-nav > div,

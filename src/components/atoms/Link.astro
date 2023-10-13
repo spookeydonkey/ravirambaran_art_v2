@@ -1,12 +1,13 @@
 ---
 // library imports
 import { Icon } from "astro-icon";
+import { Picture } from "astro:assets";
 
 interface Props {
   text: string;
   title?: string;
   href: string;
-  style: "primary" | "secondary" | "tertiary";
+  style?: string;
   image?: string;
   icon?: {
     name: string;
@@ -65,11 +66,11 @@ const data = () => ({
 
   {
     image && (
-      <img
+      <Picture
         src={image}
         alt={alt || text}
-        height="35"
-        width="35"
+        height={30}
+        width={30}
         class="link-image"
         {...rest}
       />

@@ -24,13 +24,14 @@ const {
 } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <MainHead {title} {description} />
   <body>
-    <Header slot="" />
-    <Nav slot="" />
-
+    <header>
+      <Header slot="" />
+      <Nav slot="" />
+    </header>
     <slot />
     <Footer slot="" />
 

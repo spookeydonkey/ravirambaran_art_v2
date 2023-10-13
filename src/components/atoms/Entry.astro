@@ -2,7 +2,7 @@
 // component imports
 
 // data imports
-import { Image, type AstroAssets } from "astro:assets";
+import { Image, type AstroAssets, Picture } from "astro:assets";
 import { getEntryBySlug, type CollectionEntry } from "astro:content";
 
 type Props = {
@@ -14,12 +14,12 @@ const { entry } = Astro.props;
 
 <article>
   <a href={`/about/${entry.slug}`}>
-    <Image
+    <Picture
       src={entry.data.image}
       width={300}
       height={300 / 1.5}
       alt={entry.data.title}
-      format="webp"
+      format="avif"
     />
   </a>
   <a href={`/about/${entry.slug}`}>

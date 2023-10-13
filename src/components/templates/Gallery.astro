@@ -1,6 +1,11 @@
 ---
+// components import
 import GalleryItem from "../organisms/GalleryItem.astro";
 import ImageArt from "../atoms/ImageArt.astro";
+import Link from "../atoms/Link.astro";
+
+// libraries import
+import { ViewTransitions } from "astro:transitions";
 
 //styles import
 import "../../css/main.css";
@@ -8,26 +13,26 @@ import "../../css/colors.css";
 import "../../css/typography.css";
 ---
 
-<div class="container">
-  <GalleryItem width="200px" />
-  <GalleryItem height="200px" />
-  <GalleryItem height="200px" />
-  <GalleryItem height="200px" />
-  <GalleryItem height="200px" />
-  <GalleryItem height="200px" />
-  <GalleryItem height="200px" />
-  <GalleryItem height="200px" />
-  <GalleryItem height="200px" />
-  <GalleryItem height="200px" />
-  <GalleryItem height="200px" />
-  <GalleryItem height="200px" />
-  <GalleryItem height="200px" />
+<ViewTransitions transition:persist />
+<div class="grid-container">
+  <GalleryItem>
+    <Link href="/" text="" />
+  </GalleryItem>
+  <GalleryItem />
+  <GalleryItem />
+  <GalleryItem />
+  <GalleryItem />
+  <GalleryItem />
+  <GalleryItem />
+  <GalleryItem />
+  <GalleryItem />
+  <GalleryItem />
 </div>
 
 <script>
   import MagicGrid from "magic-grid";
   const magicGrid = new MagicGrid({
-    container: ".container",
+    container: ".grid-container",
     animate: true,
     gutter: 30,
     static: true,
@@ -37,14 +42,10 @@ import "../../css/typography.css";
   magicGrid.listen();
 </script>
 <style>
-  .container div {
-    width: 280px;
-    height: 500px;
-    background-color: antiquewhite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
+  .grid-container div {
+  }
+  GalleryItem {
+    background-color: red;
   }
 </style>
 

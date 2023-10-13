@@ -1,4 +1,5 @@
 ---
+//libraries import
 import { Icon } from "astro-icon";
 
 //styles import
@@ -12,13 +13,18 @@ import "../../css/sizing.css";
   <a href="/" class="logorlm text-gradient" aria-label="Go home">
     <Icon name="logorlm" side="left" width="60" alt="Ravi Rambaran Art" />
   </a>
-   Ravi Rambaran Art
+  Ravi Rambaran Art
 </h1>
 
 <style>
   .logorlm {
     display: flex;
     align-items: center;
+  }
+  a:hover,
+  .logorlm:hover {
+    text-decoration: none;
+    border-bottom: none;
   }
 
   h1 {

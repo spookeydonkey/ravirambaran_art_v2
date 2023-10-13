@@ -3,7 +3,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import H1 from "../../components/atoms/H1.astro";
 
-// data imports
+// library imports
 import { Image, Picture } from "astro:assets";
 import { getCollection, type CollectionEntry } from "astro:content";
 
@@ -33,7 +33,7 @@ const { Content } = await entry.render();
 <MainLayout title="">
   <H1 text={entry.data.title} />
   <Picture
-    src={entry.data.image}
+    src="{entry.data.image}"
     alt={entry.data.title}
     width={1024}
     height={1024 / 1.5}

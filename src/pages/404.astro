@@ -1,0 +1,34 @@
+---
+import Link from "../components/atoms/Link.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Page Not Found">
+  <div
+    class="container"
+    style={{
+      display: "grid",
+      placeItems: "center",
+      textAlign: "center",
+      gap: "var(--s0)",
+    }}
+  >
+    <h1 class="h1">Welp, this is awkward!</h1>
+    <p>I seem to have misplaced something...</p>
+    <p
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+      }}
+    >
+      Maybe try
+      <Link
+        href="/"
+        text="going home?"
+        alt="Go home"
+        style="primary"
+        icon={{ name: "tabler:home", side: "right" }}
+      />
+    </p>
+  </div>
+</MainLayout>
